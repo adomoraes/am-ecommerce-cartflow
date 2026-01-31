@@ -1,40 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Black-Next.js
 
-## Getting Started
+## 💻 Sobre o Projeto
 
-First, run the development server:
+Este é um projeto de e-commerce desenvolvido com Next.js, focado em demonstrar a criação de uma loja virtual com funcionalidades essenciais como listagem de produtos, detalhes de produtos e carrinho de compras. O projeto utiliza um arquivo `database.json` local para simular um banco de dados de produtos.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- **[Next.js](https://nextjs.org/)**: Framework React para renderização no servidor e geração de sites estáticos.
+- **[React](https://reactjs.org/)**: Biblioteca para construção de interfaces de usuário.
+- **[TypeScript](https://www.typescriptlang.org/)**: Superset de JavaScript que adiciona tipagem estática.
+- **[Bootstrap](https://getbootstrap.com/)** e **[Reactstrap](https://reactstrap.github.io/)**: Para estilização rápida e componentes de UI responsivos.
+
+---
+
+## 📂 Arquitetura e Estrutura de Pastas
+
+O projeto segue a estrutura padrão de um aplicativo Next.js, com a lógica principal contida na pasta `src/`:
+
+```
+/
+├── public/            # Arquivos estáticos (imagens, ícones)
+├── src/
+│   ├── components/    # Componentes React reutilizáveis (Header, ProductCard, etc.)
+│   ├── hooks/         # Hooks customizados (ex: useCart para gerenciar o carrinho)
+│   ├── pages/         # Rotas da aplicação
+│   │   ├── api/       # Rotas de API do Next.js (ex: para buscar produtos)
+│   │   └── products/  # Páginas dinâmicas de produtos
+│   ├── services/      # Camada de serviço para comunicação com a API
+│   └── styles/        # Estilos globais e CSS modules
+├── database.json      # Arquivo JSON utilizado como banco de dados local
+└── package.json       # Dependências e scripts do projeto
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **`src/components`**: Contém componentes React que são utilizados em várias partes da aplicação, como o cabeçalho, cards de produto e a tabela do carrinho.
+- **`src/hooks`**: Armazena hooks customizados para encapsular e reutilizar lógica com estado, como o `useCart` que gerencia o estado do carrinho de compras.
+- **`src/pages`**: Define as rotas da aplicação. Inclui as páginas principais (`index`, `cart`), páginas dinâmicas (`products/[id]`) e as rotas de API (`api/products`) que servem os dados do `database.json`.
+- **`src/services`**: Centraliza a lógica de acesso a dados, fazendo a ponte entre os componentes e as APIs.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## ⚙️ Instalação e Execução Local
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Siga os passos abaixo para executar o projeto em seu ambiente local.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Pré-requisitos:**
+*   [Node.js](https://nodejs.org/en/) (versão 18.x ou superior)
+*   [npm](https://www.npmjs.com/) (geralmente instalado com o Node.js)
 
-## Learn More
+**Passos:**
 
-To learn more about Next.js, take a look at the following resources:
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/seu-usuario/blacknextjs.git
+    cd blacknextjs
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3.  **Execute o servidor de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4.  Abra seu navegador e acesse `http://localhost:3000` para ver a aplicação em funcionamento.
