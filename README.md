@@ -1,4 +1,4 @@
-# Black-Next.js
+# Ecommerce Cart Flow
 
 ## 💻 Sobre o Projeto
 
@@ -46,23 +46,27 @@ O projeto segue a estrutura padrão de um aplicativo Next.js, com a lógica prin
 Siga os passos abaixo para executar o projeto em seu ambiente local.
 
 **Pré-requisitos:**
-*   [Node.js](https://nodejs.org/en/) (versão 18.x ou superior)
-*   [npm](https://www.npmjs.com/) (geralmente instalado com o Node.js)
+
+- [Node.js](https://nodejs.org/en/) (versão 18.x ou superior)
+- [npm](https://www.npmjs.com/) (geralmente instalado com o Node.js)
 
 **Passos:**
 
 1.  **Clone o repositório:**
+
     ```bash
-    git clone https://github.com/seu-usuario/blacknextjs.git
-    cd blacknextjs
+    git clone https://github.com/adomoraes/am-ecommerce-cartflow.git
+    cd am-ecommerce-cartflow
     ```
 
 2.  **Instale as dependências:**
+
     ```bash
     npm install
     ```
 
 3.  **Execute o servidor de desenvolvimento:**
+
     ```bash
     npm run dev
     ```
